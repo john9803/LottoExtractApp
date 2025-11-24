@@ -132,6 +132,23 @@ fun ResultScreen(onBackClick: () -> Unit) {
     // 화면에 현재까지 보여줄 숫자 리스트
     var shownNumbers by remember { mutableStateOf<List<Int>>(emptyList()) }
 
+    // 다시추출을 위한 카운트 키
+    var drawCount by remember {mutableStateOf(0)}
+
+    // drawCount가 변경될때 마다 추출 다시 실행
+    LaunchedEffect(drawCount) {
+        shownNumbers = emptyList() // 화면의 숫자들 초기화하기
+
+        val all = generateLottoNumbers()
+        val temp = mutableListOf<Int>()
+
+        for(n in all){
+            temp.add(n)
+            shownNumbers = temp.toList()
+            delay(500L)
+        }
+    }
+
     // 한번 들어오면 자동으로 번호를 천천히 보여주는 로직
     LaunchedEffect(Unit) {
         val all = generateLottoNumbers()
@@ -175,8 +192,8 @@ fun ResultScreen(onBackClick: () -> Unit) {
             horizontalArrangement = Arrangement.spacedBy(12.dp)
         ) {
             Button(onClick = {
-                // 다시 뽑기: state를 초기화 → LaunchedEffect 재실행
-                shownNumbers = emptyList()
+                // drawCount 를 증가시켜서 재추출
+                drawCount++
             }) {
                 Text("다시 추출")
             }
