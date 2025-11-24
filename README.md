@@ -17,3 +17,7 @@
 - Android Studio (최신 버전 권장)
 - JDK 17
 - Android SDK 24 이상
+
+## 시연영상
+
+![시연영상](./lottoria_demo.gif)
