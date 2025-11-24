@@ -57,4 +57,23 @@ dependencies {
     androidTestImplementation(libs.androidx.compose.ui.test.junit4)
     debugImplementation(libs.androidx.compose.ui.tooling)
     debugImplementation(libs.androidx.compose.ui.test.manifest)
+
+    // Compose BOM (버전을 일괄 통합 관리)
+    implementation(platform("androidx.compose:compose-bom:2024.05.00"))
+
+    // Compose 기본 UI
+    implementation("androidx.compose.ui:ui")
+    implementation("androidx.compose.ui:ui-tooling-preview")
+
+    // Material3
+    implementation("androidx.compose.material3:material3")
+
+    // Activity Compose
+    implementation("androidx.activity:activity-compose:1.9.0")
+
+    // Navigation-Compose
+    implementation("androidx.navigation:navigation-compose:2.7.7")
+
+    // Debug (Tooling)
+    debugImplementation("androidx.compose.ui:ui-tooling")
 }
