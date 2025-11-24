@@ -112,6 +112,11 @@ fun MainScreen(onStartClick: () -> Unit) {
     }
 }
 
+// 1~45에서 랜덤 6개 당첨번호 뽑는 함수
+fun generateLottoNumbers(): List<Int> =
+    (1..45).shuffled().take(6).sorted()
+
+
 // ----------- 결과 화면 -----------
 @Composable
 fun ResultScreen(onBackClick: () -> Boolean) {
