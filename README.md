@@ -1,2 +1,1 @@
 # LottoExtractApp
-# LottoExtractApp
