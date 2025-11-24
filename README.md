@@ -1,2 +1,19 @@
-# LottoExtractApp
-# LottoExtractApp
+# 행운의 로또당첨번호 추첨앱 - 로또리아
+
+로또 번호를 재미있고 직관적으로 추첨할 수 있는 Android Jetpack Compose 기반 앱입니다.
+## 로또 1등 당첨은 당신의것..!!
+
+![로또리아 마스코트](./lottoria.png)
+로또리아와 함께 행운의 번호를 뽑아보세요!
+
+## 기능
+
+- 1~45 번호중 자동 6개 추출
+- 추가 추출 원할 경우 추가추출 가능
+
+
+## 요구사항
+
+- Android Studio (최신 버전 권장)
+- JDK 17
+- Android SDK 24 이상
